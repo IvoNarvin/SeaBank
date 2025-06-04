@@ -1,0 +1,124 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pesan</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+  />
+  <style>
+    /* Custom scrollbar for the notifications list if needed */
+    /* Hide default focus outline for back button but keep accessible */
+    button:focus-visible {
+      outline: 2px solid #f97316;
+      outline-offset: 2px;
+    }
+  </style>
+</head>
+<body class="bg-white text-black font-sans">
+  <div class="max-w-md mx-auto min-h-screen border border-gray-200">
+    <!-- Header -->
+    <header class="flex items-center px-4 py-3 border-b border-gray-200">
+        <a href="../IVO/index.html">
+      <button aria-label="Back" class="text-gray-600 text-xl pr-3">
+        <i class="fas fa-chevron-left"></i>
+      </button></a>
+      <h1 class="text-xl font-semibold">Pesan</h1>
+    </header>
+
+    <!-- Tabs -->
+    <nav class="flex border-b border-gray-200 px-4">
+      <button
+        class="text-orange-600 font-semibold border-b-4 border-orange-600 pb-2 mr-8"
+        aria-current="page"
+      >
+        Notifikasi
+      </button>
+      <a href="promo.html">
+      <button class="text-black font-normal pb-2">Promo</button>
+    </nav></a>
+
+    <!-- Notifications List -->
+    <main class="px-4 pt-4 space-y-6">
+      <!-- Notification item -->
+      <article class="flex space-x-4">
+        <div class="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-full border border-gray-300">
+          <a href="batas1.html">
+          <i class="fas fa-sync-alt text-gray-400 text-lg"></i>
+        </div></a>
+        <div class="flex-1">
+          <h2 class="font-semibold text-base leading-tight">
+            Batas Transaksi Berhasil Diubah
+          </h2>
+          <p class="text-gray-500 text-sm leading-relaxed mt-1">
+            Permintaan perubahan batas transfer kamu berhasil. Batas Transfer Harian: Rp500.000 menjadi: Rp1.000.000. Segera hubungi 1500130 jika tidak melakukan hal ini.
+          </p>
+          <time class="text-gray-400 text-xs mt-2 block">20 Mei 2025, 09:01</time>
+        </div>
+      </article>
+
+      <article class="flex space-x-4">
+        <div class="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-full border border-gray-300">
+          <a href="batas2.html">
+          <i class="fas fa-sync-alt text-gray-400 text-lg"></i>
+        </div></a>
+        <div class="flex-1">
+          <h2 class="font-semibold text-base leading-tight">
+            Batas Transaksi Berhasil Diubah
+          </h2>
+          <p class="text-gray-500 text-sm leading-relaxed mt-1">
+            Permintaan perubahan batas transfer kamu berhasil. Batas Transfer Harian: Rp300.000.000 menjadi: Rp500.000. Segera hubungi 1500130 jika tidak melakukan hal ini.
+          </p>
+          <time class="text-gray-400 text-xs mt-2 block">20 Mei 2025, 09:01</time>
+        </div>
+      </article>
+
+      <article class="flex space-x-4">
+        <div class="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-full border border-gray-300">
+        <a href="pembayaranqris.html">
+          <i class="fas fa-sync-alt text-gray-400 text-lg"></i>
+        </div></a>
+        <div class="flex-1">
+          <h2 class="font-semibold text-base leading-tight">
+            Pembayaran QRIS berhasil
+          </h2>
+          <p class="text-gray-500 text-sm leading-relaxed mt-1">
+            Pembayaran QRIS untuk ISELLER - QRIS - MANDIRI sebesar 100.000 telah berhasil.
+          </p>
+          <time class="text-gray-400 text-xs mt-2 block">18 Mei 2025, 00:05</time>
+        </div>
+      </article>
+
+      <article class="flex space-x-4">
+        <div class="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-full border border-gray-300">
+          <a href="tfmasuk.html">
+          <i class="fas fa-sync-alt text-gray-400 text-lg"></i>
+        </div></a>
+        <div class="flex-1">
+          <h2 class="font-semibold text-base leading-tight">Transfer Masuk</h2>
+          <p class="text-gray-500 text-sm leading-relaxed mt-1">
+            Kamu menerima transfer saldo senilai Rp15.000 dari BILAL SYAIF AKBAR.
+          </p>
+          <time class="text-gray-400 text-xs mt-2 block">17 Mei 2025, 23:53</time>
+        </div>
+      </article>
+
+      <article class="flex space-x-4">
+        <div class="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-full border border-gray-300">
+          <a href="tfmasuk2.html">
+          <i class="fas fa-sync-alt text-gray-400 text-lg"></i>
+        </div></a>
+        <div class="flex-1">
+          <h2 class="font-semibold text-base leading-tight">Transfer Masuk</h2>
+          <p class="text-gray-500 text-sm leading-relaxed mt-1">
+            Kamu menerima transfer saldo senilai Rp200.000 dari RAFFI ALEXAH HAGUNA.
+          </p>
+          <time class="text-gray-400 text-xs mt-2 block">17 Mei 2025, 23:53</time>
+        </div>
+      </article>
+    </main>
+  </div>
+</body>
+</html>

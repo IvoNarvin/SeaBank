@@ -1,0 +1,161 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>Tarik Tunai</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-white text-gray-900">
+   
+      <!-- Header -->
+      <header
+        class="flex items-center justify-between px-4 py-3 border-b border-gray-200"
+      >
+      <a href="index.html">
+        <button aria-label="Back" class="text-gray-700 text-xl">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <h1 class="text-lg font-semibold flex-1 text-center -ml-6">
+          Tarik Tunai
+        </h1>
+        </a>
+        <button
+          class="flex items-center space-x-1 text-orange-600 font-medium text-sm"
+        >
+          <i class="fas fa-file-alt text-lg"></i>
+          <span> Riwayat </span>
+        </button>
+      </header>
+
+      <!-- Merchant -->
+      <section class="mt-4 px-4">
+        <div
+          class="bg-gray-100 rounded-lg flex items-center justify-between px-4 py-3"
+        >
+          <div>
+            <p class="text-xs text-gray-400 font-normal">Merchant</p>
+            <p class="text-base font-normal mt-1">Indomaret</p>
+          </div>
+          <img
+            alt="Indomaret store logo with blue, red, and yellow stripes"
+            class="w-10 h-10 rounded-full object-contain"
+            height="40"
+            src="https://storage.googleapis.com/a1aa/image/1d7ba197-276a-4669-7006-60aded8da6dc.jpg"
+            width="40"
+          />
+        </div>
+      </section>
+
+      <!-- Amount Section -->
+      <section class="mt-6 px-4">
+        <label class="block font-semibold text-base mb-1">
+          Jumlah Tarik Tunai
+          <span class="font-normal text-xs text-gray-500">
+            (Kelipatan Rp 50.000)
+          </span>
+        </label>
+        <div
+          aria-label="Amount input"
+          class="bg-gray-100 rounded-lg flex items-center px-4 py-4 text-3xl font-extrabold"
+        >
+          <span class="text-lg font-normal mr-2 text-gray-500">Rp</span>
+          <input
+            id="amountInput"
+            type="text"
+            placeholder="0"
+            inputmode="numeric"
+            pattern="[0-9]*"
+            class="bg-transparent outline-none w-full text-gray-900 font-extrabold text-3xl"
+          />
+        </div>
+        <p class="text-xs text-gray-400 mt-2" id="saldoText">
+          Saldo Tersedia: Rp 1.803.692
+        </p>
+        <button class="text-xs text-blue-600 mt-1 font-normal">Ubah limit</button>
+      </section>
+
+      <!-- Amount options -->
+      <section class="mt-4 px-4 grid grid-cols-3 gap-3">
+        <button class="nominalBtn border border-gray-300 rounded-lg py-3 text-center text-gray-900 font-semibold text-base" data-amount="50000" type="button">Rp <span class="font-extrabold">50</span>.000</button>
+        <button class="nominalBtn border border-gray-300 rounded-lg py-3 text-center text-gray-900 font-semibold text-base" data-amount="100000" type="button">Rp <span class="font-extrabold">100</span>.000</button>
+        <button class="nominalBtn border border-gray-300 rounded-lg py-3 text-center text-gray-900 font-semibold text-base" data-amount="250000" type="button">Rp <span class="font-extrabold">250</span>.000</button>
+        <button class="nominalBtn border border-gray-300 rounded-lg py-3 text-center text-gray-900 font-semibold text-base" data-amount="500000" type="button">Rp <span class="font-extrabold">500</span>.000</button>
+        <button class="nominalBtn border border-gray-300 rounded-lg py-3 text-center text-gray-900 font-semibold text-base" data-amount="750000" type="button">Rp <span class="font-extrabold">750</span>.000</button>
+        <button class="nominalBtn border border-gray-300 rounded-lg py-3 text-center text-gray-900 font-semibold text-base" data-amount="1000000" type="button">Rp <span class="font-extrabold">1.000</span>.000</button>
+      </section>
+
+      <!-- Fee -->
+      <section
+        class="mt-6 px-4 flex justify-between text-gray-600 text-base font-normal"
+      >
+        <span>Biaya Tarik Tunai</span>
+        <span>-</span>
+      </section>
+
+      <!-- Spacer to push button down -->
+      <div class="flex-grow"></div>
+
+      <!-- Continue button -->
+      <button
+        id="continueBtn"
+        class="mx-4 mb-6 py-3 rounded-lg bg-gray-300 text-gray-400 font-semibold text-base cursor-not-allowed"
+        disabled
+      >
+        Lanjut
+      </button>
+    </div>
+
+    <!-- Script -->
+    <script>
+      const input = document.getElementById("amountInput");
+      const button = document.getElementById("continueBtn");
+      const saldo = 1803692;
+
+      const format = (num) => num.toLocaleString("id-ID");
+
+      function validateAmount() {
+        const raw = input.value.replace(/[^\d]/g, "");
+        const value = parseInt(raw, 10);
+
+        if (!isNaN(value)) {
+          input.value = format(value); // formatting input
+          if (value % 50000 === 0 && value <= saldo) {
+            button.disabled = false;
+            button.classList.remove("bg-gray-300", "text-gray-400", "cursor-not-allowed");
+            button.classList.add("bg-blue-600", "text-white", "cursor-pointer");
+            return;
+          }
+        }
+
+        // invalid case
+        button.disabled = true;
+        button.classList.add("bg-gray-300", "text-gray-400", "cursor-not-allowed");
+        button.classList.remove("bg-blue-600", "text-white", "cursor-pointer");
+      }
+
+      input.addEventListener("input", validateAmount);
+
+      // Click nominal buttons
+      document.querySelectorAll(".nominalBtn").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const amount = parseInt(btn.dataset.amount, 10);
+          input.value = format(amount);
+          validateAmount();
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,116 @@
+<html lang="id">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Profil Saya
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   /* Custom scrollbar hidden for modal */
+    body.modal-open {
+      overflow: hidden;
+    }
+  </style>
+ </head>
+ <body class="bg-gray-100 font-sans relative min-h-screen">
+  <!-- Header -->
+  <header class="flex items-center px-4 py-3 bg-white shadow-sm">
+   <button aria-label="Back" class="text-gray-700 text-xl mr-3">
+    <i class="fas fa-chevron-left">
+    </i>
+   </button>
+   <h1 class="text-lg font-bold text-gray-900">
+    Profil Saya
+   </h1>
+  </header>
+  <!-- Profile content -->
+  <main class="bg-white mt-2 divide-y divide-gray-300">
+   <section class="flex items-center justify-between px-4 py-4">
+    <span class="text-gray-700 text-base">
+     Foto
+    </span>
+    <div class="flex items-center space-x-2">
+     <img alt="User profile icon with orange background" class="w-10 h-10 rounded-full" height="40" src="https://storage.googleapis.com/a1aa/image/724118bb-c951-4132-22ed-11361ddfc17e.jpg" width="40"/>
+     <i class="fas fa-chevron-right text-gray-400">
+     </i>
+    </div>
+   </section>
+   <section class="flex items-center justify-between px-4 py-4">
+    <span class="text-gray-700 text-base">
+     Link dengan Shopee
+    </span>
+    <div class="flex items-center space-x-2">
+     <span class="text-gray-900 text-base">
+      kopralidid
+     </span>
+     <i class="fas fa-chevron-right text-gray-400">
+     </i>
+    </div>
+   </section>
+  </main>
+  <main class="bg-white mt-4 divide-y divide-gray-300">
+   <section class="flex items-center justify-between px-4 py-4">
+    <span class="text-gray-700 text-base">
+     Nama
+    </span>
+    <span class="text-gray-900 text-base">
+     Ivo Maulana Narvin
+    </span>
+   </section>
+   <section class="flex items-center justify-between px-4 py-4">
+    <span class="text-gray-700 text-base">
+     No. Handphone
+    </span>
+    <div class="flex items-center space-x-2">
+     <span class="text-gray-900 text-base">
+      089****089
+     </span>
+     <i class="fas fa-chevron-right text-gray-400">
+     </i>
+    </div>
+   </section>
+   <section class="flex items-center justify-between px-4 py-4">
+    <span class="text-gray-700 text-base">
+     Email
+    </span>
+    <div class="flex items-center space-x-2">
+     <span class="text-gray-400 text-base">
+      Ubah
+     </span>
+     <i class="fas fa-chevron-right text-gray-400">
+     </i>
+    </div>
+   </section>
+   <section class="flex items-center justify-between px-4 py-4">
+    <span class="text-gray-700 text-base">
+     Informasi Pribadi
+    </span>
+    <div class="flex items-center space-x-2">
+     <span class="text-gray-400 text-base">
+      Ubah
+     </span>
+     <i class="fas fa-chevron-right text-gray-400">
+     </i>
+    </div>
+   </section>
+  </main>
+  <!-- Modal bottom sheet -->
+  <div class="fixed inset-0 bg-black bg-opacity-50 flex items-end justify-center z-50">
+   <div class="w-full max-w-md bg-white rounded-t-2xl">
+    <button class="w-full py-4 text-center text-black text-base border-b border-gray-200">
+     Ambil foto
+    </button>
+    <button class="w-full py-4 text-center text-black text-base border-b border-gray-200">
+     Pilih dari galeri
+    </button>
+    <a href="profilsaya.html">
+    <button class="w-full py-4 text-center text-orange-600 text-base font-normal rounded-b-2xl">
+     Batalkan
+    </button></a>
+   </div>
+  </div>
+ </body>
+</html>

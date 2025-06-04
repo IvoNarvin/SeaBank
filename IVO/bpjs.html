@@ -1,0 +1,67 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BPJS</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+  />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-[#F5F7FA] min-h-screen flex flex-col">
+  <header class="flex items-center px-4 py-3 bg-white border-b border-gray-200">
+    <a href="lihatsemua.html">
+    <button aria-label="Back" class="text-gray-600 text-xl mr-3">
+      <i class="fas fa-chevron-left"></i>
+    </button></a>
+    <h1 class="text-black text-lg font-normal">BPJS</h1>
+  </header>
+
+  <nav class="flex border-b border-[#E67A23] bg-white">
+    <button
+      class="flex-1 text-[#E67A23] font-semibold text-sm py-3 border-b-4 border-[#E67A23]"
+      type="button"
+    >
+      BPJS Kesehatan
+    </button>
+    <a href="tenagakerja.html">
+    <button
+      class="flex-1 text-black font-normal text-sm py-3"
+      type="button"
+    >
+      BPJS Ketenagakerjaan
+    </button></a>
+  </nav>
+
+  <main class="flex-grow px-4 pt-6">
+    <input
+      type="text"
+      placeholder="No. Virtual Account"
+      class="w-full mb-4 rounded-md bg-[#F5F7FA] placeholder-gray-400 text-gray-900 text-base px-4 py-3 border border-transparent focus:outline-none focus:ring-0"
+    />
+    <button
+      type="button"
+      class="w-full flex justify-between items-center rounded-md bg-[#F5F7FA] text-gray-600 text-base px-4 py-3 border border-transparent focus:outline-none focus:ring-0"
+    >
+      <span>Bayar Sampai</span>
+      <i class="fas fa-chevron-right text-gray-400"></i>
+    </button>
+  </main>
+
+  <footer class="p-4 bg-white">
+    <button
+      disabled
+      class="w-full bg-gray-300 text-gray-400 text-center py-3 rounded-lg text-base font-normal cursor-not-allowed"
+    >
+      Cek Tagihan
+    </button>
+  </footer>
+</body>
+</html>

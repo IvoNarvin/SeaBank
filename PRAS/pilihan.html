@@ -1,0 +1,65 @@
+<html lang="id">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Link dengan Shopee
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   /* Custom scrollbar hidden for modal overlay */
+    body.modal-open {
+      overflow: hidden;
+    }
+  </style>
+ </head>
+ <body class="bg-gray-100 font-sans relative min-h-screen">
+  <div class="max-w-md mx-auto pt-6 px-4">
+   <header class="flex items-center space-x-3 mb-6">
+    <button aria-label="Back" class="text-gray-700 text-2xl leading-none">
+     <i class="fas fa-chevron-left">
+     </i>
+    </button>
+    <h1 class="text-lg font-semibold text-gray-900">
+     Link dengan Shopee
+    </h1>
+   </header>
+   <div class="flex items-center space-x-3 mb-6">
+    <img alt="Logo Shopee orange shopping bag icon on white background" class="w-10 h-10 rounded-full" height="40" src="https://storage.googleapis.com/a1aa/image/9973aa26-df26-4960-a9ee-1975b04a135d.jpg" width="40"/>
+    <div>
+     <p class="text-base font-semibold text-gray-900">
+      Username Shopee: kopralidid
+     </p>
+     <p class="text-sm text-gray-500">
+      Tanggal Terhubung: 26 Feb 2025, 14:26
+     </p>
+    </div>
+   </div>
+   <button class="w-full border border-orange-600 text-orange-600 font-medium py-3 rounded-md text-center" type="button">
+    Berhenti
+   </button>
+  </div>
+  <!-- Modal Overlay -->
+  <div aria-describedby="modal-desc" aria-labelledby="modal-title" aria-modal="true" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-6" role="dialog">
+   <div class="bg-white rounded-xl max-w-md w-full p-6">
+    <h2 class="text-center text-gray-900 font-semibold text-lg mb-2" id="modal-title">
+     Yakin ingin berhenti?
+    </h2>
+    <p class="text-center text-gray-500 mb-6 text-sm leading-relaxed" id="modal-desc">
+     Konfirmasi untuk berhenti menghubungkan dengan akun Shopee
+    </p>
+    <div class="flex space-x-4 justify-center">
+        <a href="linkdgshopee.html">
+     <button class="border border-orange-600 text-orange-600 font-medium rounded-md px-8 py-2" type="button">
+      Batalkan
+     </button></a>
+     <button class="bg-orange-600 text-white font-medium rounded-md px-8 py-2" type="button">
+      Pilih
+     </button>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>

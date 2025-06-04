@@ -1,0 +1,110 @@
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aplikasi Shopee</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+  />
+  <style>
+    /* Custom circle for step numbers */
+    .step-circle {
+      width: 24px;
+      height: 24px;
+      line-height: 24px;
+      border-radius: 9999px;
+      background-color: #d1d5db; /* Tailwind gray-300 */
+      color: #6b7280; /* Tailwind gray-500 */
+      font-size: 0.875rem; /* text-sm */
+      font-weight: 600;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      flex-shrink: 0;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 font-sans">
+  <div class="max-w-md mx-auto min-h-screen bg-gray-50">
+    <!-- Header -->
+    <header class="flex items-center space-x-4 mb-4">
+    <a href="tambahsaldo.html">
+    <button aria-label="Back" class="text-gray-500 text-xl leading-none">
+     <i class="fas fa-chevron-left">
+     </i>
+    </button></a>
+    <h1 class="text-xl font-semibold">
+    Aplikasi Shopee
+    </h1>
+   </header>
+
+    <!-- Tabs -->
+    <nav class="flex space-x-3 px-4 py-3 mt-3">
+      <button
+        class="text-orange-700 bg-orange-100 rounded-full px-4 py-1 text-sm font-semibold"
+        aria-current="page"
+      >
+        ShopeePay
+      </button>
+       <a href="saldopenjual.html">
+      <button
+        class="text-gray-600 bg-gray-200 rounded-full px-4 py-1 text-sm font-normal"
+      >
+        Saldo Penjual
+      </button></a>
+      <button
+        class="text-gray-600 bg-gray-200 rounded-full px-4 py-1 text-sm font-normal"
+      >
+        Merchant Wallet
+      </button>
+    </nav>
+
+    <!-- Content Card -->
+    <section
+      class="bg-white rounded-lg shadow-sm mx-4 mt-4 p-4 border border-gray-200"
+      role="region"
+      aria-labelledby="card-title"
+    >
+      <h2
+        id="card-title"
+        class="flex items-center text-gray-800 text-base font-normal mb-4"
+      >
+        <i class="fas fa-wallet text-orange-600 mr-2 text-lg"></i>
+        Tambah Saldo via ShopeePay
+      </h2>
+
+      <ol class="space-y-4 text-gray-600 text-sm leading-relaxed">
+        <li class="flex items-start space-x-3">
+          <span class="step-circle">1</span>
+          <p>
+            Buka Halaman ShopeePay di Aplikasi Shopee kamu, lalu pilih
+            <strong>Transfer Bank</strong>
+          </p>
+        </li>
+        <li class="flex items-start space-x-3">
+          <span class="step-circle">2</span>
+          <p>
+            Pilih SeaBank sebagai bank penerima dan masukkan nominal transfer.
+            Pelajari lebih lanjut tentang cara menghubungkan akun ShopeePay
+            <a href="#" class="text-blue-600 underline">di sini</a>.
+          </p>
+        </li>
+        <li class="flex items-start space-x-3">
+          <span class="step-circle">3</span>
+          <p>Konfirmasi detail transfer dan klik Konfirmasi.</p>
+        </li>
+        <li class="flex items-start space-x-3">
+          <span class="step-circle">4</span>
+          <p>Masukkan 6 digit PIN ShopeePay kamu untuk melanjutkan.</p>
+        </li>
+        <li class="flex items-start space-x-3">
+          <span class="step-circle">5</span>
+          <p>Berhasil! Saldo kamu telah ditransfer ke SeaBank</p>
+        </li>
+      </ol>
+    </section>
+  </div>
+</body>
+</html>

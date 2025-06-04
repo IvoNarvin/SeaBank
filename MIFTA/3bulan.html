@@ -1,0 +1,78 @@
+<html lang="id">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Deposito Modal
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+ </head>
+ <body class="bg-white relative min-h-screen flex flex-col">
+  <!-- Orange header section -->
+  <header class="bg-gradient-to-r from-[#B75E00] to-[#7A3B00] p-5 relative">
+   <h2 class="text-gray-300 font-semibold text-lg">
+    Deposito
+   </h2>
+   <h1 class="text-gray-300 font-extrabold text-3xl leading-[1.1] mt-1 max-w-[14rem]">
+    Nikmati bunga
+    <br/>
+    hingga 6% p.a.
+   </h1>
+   <p class="text-gray-300 text-sm mt-2 max-w-[14rem]">
+    Raih keuntungan lebih dari uang Kamu sekarang!
+   </p>
+   <img alt="Illustration of a white chicken with coins and a man holding a coin" class="absolute right-3 top-5 w-[120px] h-[80px] object-contain" decoding="async" height="80" loading="lazy" src="https://storage.googleapis.com/a1aa/image/579d419f-69a6-482a-2fc0-19687d702301.jpg" width="120"/>
+   <div class="absolute top-5 right-3 flex items-center space-x-1">
+    <div class="border border-gray-400 rounded-full p-2">
+     <i class="fas fa-bell text-gray-400 text-xl">
+     </i>
+    </div>
+    <div class="bg-gray-400 text-gray-900 rounded-full text-xs font-semibold w-5 h-5 flex items-center justify-center -ml-3 z-10">
+     13
+    </div>
+   </div>
+  </header>
+  <!-- Modal overlay -->
+  <div class="fixed inset-0 bg-black bg-opacity-30 flex items-center justify-center z-50 p-4">
+   <!-- Modal box -->
+   <div class="bg-white rounded-xl w-full max-w-md p-6">
+    <h3 class="text-center text-xl font-semibold mb-3">
+     Segera Hadir
+    </h3>
+    <p class="text-center text-gray-500 mb-6 px-4 leading-relaxed">
+     Tambahkan saldo ke rekening tabunganmu sebelum Deposito Flash Deals dimulai.
+    </p>
+    <div class="divide-y divide-gray-200 border border-gray-200 rounded-lg overflow-hidden">
+     <div class="flex">
+      <div class="bg-gray-100 w-1/2 py-4 text-center text-gray-600 text-sm leading-tight">
+       Jumlah penempatan min.
+      </div>
+      <div class="w-1/2 py-4 text-center text-gray-800 text-sm font-normal leading-tight border-l border-gray-200">
+       Rp 1.000.000
+      </div>
+     </div>
+     <div class="flex">
+      <div class="bg-gray-100 w-1/2 py-4 text-center text-gray-600 text-sm leading-tight">
+       Jumlah penempatan max.
+      </div>
+      <div class="w-1/2 py-4 text-center text-gray-800 text-sm font-normal leading-tight border-l border-gray-200">
+       Rp 250.000.000
+      </div>
+     </div>
+    </div>
+    <a href="deposito.html">
+    <button class="mt-6 w-full bg-[#E96B00] hover:bg-[#cc5a00] text-white font-semibold py-3 rounded-lg transition-colors" type="button">
+     OK
+    </button></a>
+   </div>
+  </div>
+ </body>
+</html>

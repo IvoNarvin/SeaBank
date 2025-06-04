@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pulsa</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+  </style>
+</head>
+<body class="bg-white text-gray-900">
+ 
+    <!-- Header -->
+    <header class="flex items-center gap-4 px-4 py-4 border-b border-gray-200">
+     <a href="topupdantagihan.html">
+      <button aria-label="Back" class="text-2xl text-gray-700">
+        &lt;
+      </button></a>
+      <h1 class="text-lg font-semibold">Pulsa</h1>
+    </header>
+
+    <!-- Nomor input -->
+    <section class="bg-gray-100 mx-4 mt-4 rounded-md px-4 py-3">
+      <label for="phone" class="text-sm text-gray-600">Nomor Telepon</label>
+      <input id="phone" type="tel" maxlength="13"
+             class="w-full text-xl font-semibold bg-transparent outline-none"
+             placeholder="081515453476">
+      <p class="text-sm text-gray-500">Nomor tidak dikenal</p>
+    </section>
+
+    <!-- Tabs -->
+    <nav class="flex gap-8 px-4 mt-6 border-b border-gray-200">
+      <button class="text-orange-600 font-semibold border-b-2 border-orange-600 pb-1">Pulsa</button>
+     <a href="data.html"><button class="text-gray-900 font-normal pb-1">Data</button></a> 
+      <button class="text-gray-900 font-normal pb-1">Roaming</button>
+    </nav>
+    
+
+    <!-- Grid Pilihan Pulsa -->
+    <main class="px-4 mt-6 flex-1">
+      <div id="grid" class="grid grid-cols-3 gap-4">
+        <!-- Elemen akan di-generate lewat JS -->
+      </div>
+    </main>
+  </div>
+
+  <!-- Modal Konfirmasi -->
+  <div id="modal" class="fixed inset-0 bg-black bg-opacity-40 hidden justify-center items-end">
+    <div class="bg-white w-full p-6 rounded-t-2xl shadow-lg">
+      <h2 class="text-lg font-semibold mb-4">Konfirmasi Pembayaran</h2>
+      <p class="text-2xl font-bold mb-2" id="hargaModal">Rp0</p>
+      <p class="mb-1 text-sm">Produk: <span id="produkModal"></span></p>
+      <p class="mb-1 text-sm">Biaya Admin: <span class="text-green-600 font-semibold">GRATIS</span></p>
+      <p class="mb-4 text-sm">Metode Pembayaran: <strong>SeaBank (*7540)</strong></p>
+      <button onclick="tutupModal()" class="w-full bg-orange-600 text-white py-2 rounded-md font-semibold">Konfirmasi</button>
+    </div>
+  </div>
+
+  <script>
+    const pulsaList = [
+      { nominal: 5000, bayar: 7200 },
+      { nominal: 10000, bayar: 12200 },
+      { nominal: 12000, bayar: 13150 },
+      { nominal: 15000, bayar: 16000 },
+      { nominal: 20000, bayar: 21400 },
+      { nominal: 25000, bayar: 26000 },
+      { nominal: 30000, bayar: 31000 },
+      { nominal: 50000, bayar: 51000 },
+      { nominal: 100000, bayar: 101000 },
+      { nominal: 150000, bayar: 151000 },
+      { nominal: 200000, bayar: 201000 }
+    ];
+
+    const grid = document.getElementById('grid');
+    const modal = document.getElementById('modal');
+    const hargaModal = document.getElementById('hargaModal');
+    const produkModal = document.getElementById('produkModal');
+
+    pulsaList.forEach(item => {
+      const div = document.createElement('div');
+      div.className = 'border border-gray-200 rounded-md p-4 text-center cursor-pointer hover:bg-gray-100';
+      div.innerHTML = `
+        <p class="font-bold text-lg leading-none">${item.nominal.toLocaleString()}</p>
+        <p class="text-sm text-gray-600 mt-1">Bayar: Rp${item.bayar.toLocaleString()}</p>
+      `;
+      div.onclick = () => {
+        hargaModal.textContent = `INDOSAT ${item.nominal.toLocalestring()}`
+        produkModal.textContent = `INDOSAT ${item.nominal.toLocalestring()}`
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+      };
+      grid.appendChild(div);
+    });
+
+    function tutupModal() {
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+  </script>
+</body>
+</html>

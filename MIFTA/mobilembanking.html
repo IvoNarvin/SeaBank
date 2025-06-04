@@ -1,0 +1,129 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Mobile Banking
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+ </head>
+ <body class="bg-white text-gray-900">
+  <div class="max-w-md mx-auto p-4">
+   <!-- Header -->
+   <header class="flex items-center space-x-4 mb-4">
+    <a href="tambahsaldo.html">
+    <button aria-label="Back" class="text-gray-500 text-xl leading-none">
+     <i class="fas fa-chevron-left">
+     </i>
+    </button></a>
+    <h1 class="text-xl font-semibold">
+     Mobile Banking
+    </h1>
+   </header>
+   <!-- Bank Tabs -->
+   <nav class="flex space-x-2 overflow-x-auto pb-2 mb-4">
+    <button class="flex-shrink-0 px-4 py-1 rounded-full bg-[#FFF1E6] text-[#D87D2A] font-semibold text-sm" type="button">
+     BRI
+    </button>
+    <a href="mandiri.html">
+    <button class="flex-shrink-0 px-4 py-1 rounded-full bg-[#F3F3F3] text-gray-600 text-sm" type="button">
+     Mandiri
+    </button></a>
+    <button class="flex-shrink-0 px-4 py-1 rounded-full bg-[#F3F3F3] text-gray-600 text-sm" type="button">
+     BCA
+    </button>
+    <button class="flex-shrink-0 px-4 py-1 rounded-full bg-[#F3F3F3] text-gray-600 text-sm" type="button">
+     BNI
+    </button>
+    <button class="flex-shrink-0 px-4 py-1 rounded-full bg-[#F3F3F3] text-gray-600 text-sm" type="button">
+     Bank
+    </button>
+   </nav>
+   <!-- Card -->
+   <section aria-label="Tambah Saldo via BRI" class="bg-white rounded-lg shadow-md p-5 border border-gray-100">
+    <div class="flex items-center space-x-2 mb-4">
+     <img alt="BRI logo in blue text on white background" class="flex-shrink-0" height="20" src="https://storage.googleapis.com/a1aa/image/0e1b92fb-7ce7-40e7-4ea4-d8cb2c310831.jpg" width="20"/>
+     <h2 class="text-base font-normal">
+      Tambah Saldo via BRI
+     </h2>
+    </div>
+    <ol class="list-decimal list-inside space-y-3 text-gray-600 text-sm mb-5">
+     <li>
+      <span class="font-normal">
+       Login ke akun BRIMO kamu, lalu pilih
+       <strong>
+        Transfer - Tambah Daftar Baru
+       </strong>
+      </span>
+     </li>
+     <li>
+      <span class="font-normal">
+       Pilih
+       <strong>
+        SeaBank
+       </strong>
+       sebagai bank penerima
+      </span>
+     </li>
+     <li>
+      <span class="font-normal">
+       Masukkan nomor rekening kamu dan lanjutkan proses transfer sesuai aplikasi.
+      </span>
+     </li>
+    </ol>
+    <div class="bg-[#F3F6F9] rounded-lg p-4 space-y-4 text-sm text-gray-900">
+     <div>
+      <p class="text-xs text-gray-400 mb-1">
+       Nama Bank
+      </p>
+      <div class="flex justify-between items-center">
+       <p class="font-normal">
+        SeaBank
+       </p>
+       <button aria-label="Copy Nama Bank" class="text-[#D87D2A]">
+        <i class="far fa-copy fa-lg">
+        </i>
+       </button>
+      </div>
+     </div>
+     <div>
+      <p class="text-xs text-gray-400 mb-1">
+       Nama Penerima
+      </p>
+      <div class="flex justify-between items-center">
+       <p class="font-normal">
+        IVO MAULANA NARVIN
+       </p>
+       <button aria-label="Copy Nama Penerima" class="text-[#D87D2A]">
+        <i class="far fa-copy fa-lg">
+        </i>
+       </button>
+      </div>
+     </div>
+     <div>
+      <p class="text-xs text-gray-400 mb-1">
+       Nomor Rekening
+      </p>
+      <div class="flex justify-between items-center">
+       <p class="font-normal">
+        901960387540
+       </p>
+       <button aria-label="Copy Nomor Rekening" class="text-[#D87D2A]">
+        <i class="far fa-copy fa-lg">
+        </i>
+       </button>
+      </div>
+     </div>
+    </div>
+   </section>
+  </div>
+ </body>
+</html>

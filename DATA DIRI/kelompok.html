@@ -1,0 +1,136 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Data Diri 6 Anak</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background: #f5f7fa;
+    color: #333;
+  }
+
+  .container {
+    max-width: 900px;
+    margin: 70px auto 40px;
+    padding: 0 20px;
+  }
+
+  /* Back Button */
+  .back-button {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    background: #ff6600e3;
+    border: none;
+    color: white;
+    font-weight: 600;
+    padding: 10px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 2px 6px  #ff6600e3;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    user-select: none;
+  }
+  .back-button:hover {
+    background-color: #ff6600e3
+  }
+  .back-button svg {
+    width: 14px;
+    height: 14px;
+    fill: white;
+  }
+
+  h1 {
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: #222;
+  }
+
+  .card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px 25px;
+    margin-bottom: 20px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    transition: box-shadow 0.3s ease;
+  }
+  .card:hover {
+    box-shadow: 0 8px 22px rgba(0,0,0,0.15);
+  }
+
+  .card h2 {
+    margin: 0 0 12px;
+    font-weight: 600;
+    color:  #ff6600e3;
+  }
+  .card p {
+    margin: 6px 0;
+    font-size: 15px;
+    line-height: 1.4;
+    color: #444;
+  }
+</style>
+</head>
+<body>
+
+<button type="button" class="back-button" onclick="window.history.back()">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" >
+    <path d="M15 18l-6-6 6-6"/>
+  </svg>
+  Kembali
+</button>
+
+<div class="container">
+  <h1>Data Diri 6 Anak</h1>
+
+  <div class="card">
+    <h2>1. Ivo Maulana Narvin</h2>
+    <p><strong>Usia:</strong> 17 tahun</p>
+    <p><strong>Jenis Kelamin:</strong> Laki-laki</p>
+    <p><strong>Alamat:</strong> Jl. Karangan Jaya Gg.4 No. 5, Surabaya</p>
+  </div>
+  <div class="card">
+    <h2>2. Mikhail Farellino Siahaan</h2>
+    <p><strong>Usia:</strong> 17 tahun</p>
+    <p><strong>Jenis Kelamin:</strong> Laki-laki</p>
+    <p><strong>Alamat:</strong> Jl. Kencana Sari 15/15, Surabaya</p>
+  </div>
+  <div class="card">
+    <h2>3. Moch. Mifta Rizki Alfian</h2>
+    <p><strong>Usia:</strong> 17 tahun</p>
+    <p><strong>Jenis Kelamin:</strong> Laki-laki</p>
+    <p><strong>Alamat:</strong> Jl. Karangrejo Buntu 1 No.12, Surabaya</p>
+  </div>
+  <div class="card">
+    <h2>4. Novan Arga Fardana P.</h2>
+    <p><strong>Usia:</strong> 17 tahun</p>
+    <p><strong>Jenis Kelamin:</strong> Laki-laki</p>
+    <p><strong>Alamat:</strong> Jl. Wisma Lidah Kulon, Surabaya</p>
+  </div>
+  <div class="card">
+    <h2>5. Dwi Prasetyo</h2>
+    <p><strong>Usia:</strong> 17 tahun</p>
+    <p><strong>Jenis Kelamin:</strong> Laki-laki</p>
+    <p><strong>Alamat:</strong> Jl. Kedurus 1c No.45, Surabaya</p>
+  </div>
+  <div class="card">
+    <h2>6. Raffi Alexa Haguna</h2>
+    <p><strong>Usia:</strong> 18 tahun</p>
+    <p><strong>Jenis Kelamin:</strong> Laki-laki</p>
+    <p><strong>Alamat:</strong> Jl. Putat Jaya C Barat No.16/8, Surabaya</p>
+  </div>
+</div>
+
+</body>
+</html>
